@@ -6,6 +6,16 @@ const nextConfig: NextConfig = {
   basePath: '/arindubey/portfolio',
   devIndicators: false,
   output: "standalone",
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/arindubey/portfolio',
+        basePath: false,
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
